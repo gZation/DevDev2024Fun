@@ -105,9 +105,9 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 0.015
+  m_Radius: 0.025
   m_Center: {x: -0.000000029808707, y: -0.0063225827, z: -0.04}
 --- !u!114 &1522512083981230655
 MonoBehaviour:
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 1774105123904912978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0159, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -565,7 +565,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.768, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &73127839558362431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   speed: 4
   currHealth: 200
   maxHealth: 200
-  wrench: {fileID: 0}
+  wrench: {fileID: 1522512083981230655}
   collectedItems: []
   infiMove: 0
 --- !u!114 &509468603486924616
