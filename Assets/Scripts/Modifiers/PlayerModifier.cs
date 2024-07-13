@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerModifier : MonoBehaviour
+public abstract class PlayerModifier<D>  : MonoBehaviour
+    where D : ModifierData
 {
-    protected Player _player;   
+    protected Player _player;
+    protected D _data;
+    
     protected void Awake()
     {
         _player = GetComponentInParent<Player>();
     }
-    public abstract void OnApply();
+    public abstract void OnApply(D data);
     public abstract void OnRemove();
     public void OnDestroy()
     {
@@ -17,4 +20,4 @@ public abstract class PlayerModifier : MonoBehaviour
     }
 }
 
-public abstract class ModifierData{ }
+public abstract class ModifierData { }

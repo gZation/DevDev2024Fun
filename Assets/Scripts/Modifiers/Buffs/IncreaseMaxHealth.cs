@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseMaxHealth : PlayerModifier
+public class IncreaseMaxHealth : PlayerModifier<IncreaseMaxHealthData>
 {
-    private IncreaseMaxHealthData data;
-    public override void OnApply()
+    public override void OnApply(IncreaseMaxHealthData data)
     {
-        _player.maxHealth += data.healthIncrease;
+        _data = data;
+        _player.maxHealth += _data.healthIncrease;
     }
 
     public override void OnRemove()
     {
-        _player.maxHealth -= data.healthIncrease;
+        _player.maxHealth -= _data.healthIncrease;
     }
 }
 

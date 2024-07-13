@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamagable
 {
     // Modifiers
     public float speed;
@@ -53,11 +53,25 @@ public class Player : MonoBehaviour
         //animator.Play("slash");
     }
     #endregion
-    public void ApplyModifier<M>() where M : PlayerModifier 
+    public void Damage(float amount)
     {
-        GameObject go = new GameObject(typeof(M).ToString());
-        go.AddComponent<M>().OnApply();
-        go.transform.parent = transform;
+        currHealth -= amount;
+        // TODO: UPDATE UI HERE
+        if (currHealth <= 0)
+        {
+            OnPlayerDeath();
+            Debug.Log("Player Is Dead");
+        }
     }
+    public void OnPlayerDeath()
+    {
+
+    }
+    //public void ApplyModifier<M>(ModifierData data) where M : PlayerModifier<D>
+    //{
+    //    GameObject go = new GameObject(typeof(M).ToString());
+    //    go.AddComponent<M>().OnApply(data);
+    //    go.transform.parent = transform;
+    //}
     
 }
