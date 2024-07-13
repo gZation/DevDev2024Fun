@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8323770663368998764}
   - component: {fileID: 3849683547488501948}
   - component: {fileID: 1522512083981230655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trowel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
