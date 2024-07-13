@@ -10,11 +10,30 @@ public class Player : MonoBehaviour, IDamagable
 {
     [Header("Player Stats")]
     public float speed;
-    public float currHealth;
-    public float maxHealth = 100;
+    [SerializeField] private float currHealth;
+    [SerializeField] private float maxHealth = 100f;
+    public float CurrHealth
+    {
+        get => currHealth;
+        set
+        {
+            currHealth = value;
+            UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);   
+        }
+    }
+    public float MaxHealth
+    {
+        get => maxHealth;
+        set
+        {
+            maxHealth = value;
+            UIManager.Instance.UpdatePlayerMaxHealth(maxHealth);
+        }
+    }
 
     [Header("Player References")]
     public Damager wrench;
+    public List<Item> collectedItems;
 
     [Header("Modifier Bools")]
     public bool infiMove;
@@ -24,14 +43,17 @@ public class Player : MonoBehaviour, IDamagable
     private Animator animator;
     private Vector3 movement = Vector3.zero;
     private Vector2 mousePosition;
-
-    
     
     #region Unity Messages
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);
+        UIManager.Instance.UpdatePlayerMaxHealth(maxHealth);
     }
     private void FixedUpdate()
     {
@@ -48,7 +70,7 @@ public class Player : MonoBehaviour, IDamagable
         targetRotation = Quaternion.RotateTowards(
             transform.rotation,
             targetRotation,
-            360 * Time.fixedDeltaTime
+            360 * Time.fixedDeltaTime * speed
             );
         rb.MoveRotation(targetRotation);
     }
@@ -56,7 +78,7 @@ public class Player : MonoBehaviour, IDamagable
     #region Actions
     public void OnMove(InputValue value)
     {
-        if (infiMove && value.Get<Vector2>() == Vector2.zero) 
+        if (infiMove && value.Get<Vector2>() == Vector2.zero && value.Get<Vector2>().magnitude < 1) 
         {
             return;
         }
@@ -70,9 +92,8 @@ public class Player : MonoBehaviour, IDamagable
     #endregion
     public void Damage(float amount)
     {
-        currHealth -= amount;
-        // TODO: UPDATE UI HERE
-        if (currHealth <= 0)
+        CurrHealth -= amount;
+        if (CurrHealth <= 0)
         {
             OnPlayerDeath();
             Debug.Log("Player Is Dead");

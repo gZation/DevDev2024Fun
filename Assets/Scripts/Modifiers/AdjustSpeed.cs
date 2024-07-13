@@ -12,7 +12,7 @@ public class AdjustSpeed : PlayerModifier<AdjustSpeedData>
 
     public override void OnRemove()
     {
-        _player.maxHealth /= _data.scalar;
+        _player.speed /= _data.scalar;
     }
 }
 

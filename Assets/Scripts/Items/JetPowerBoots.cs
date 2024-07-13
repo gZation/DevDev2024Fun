@@ -10,7 +10,7 @@ public class JetPowerBoots : Item
 {
     protected override void OnPickUp(Player player)
     {
-        player.ApplyModifier<AdjustSpeed, AdjustSpeedData>(new AdjustSpeedData(3f));
+        player.speed += 4;
         player.infiMove = true;
     }
 }

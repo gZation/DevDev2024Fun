@@ -12,12 +12,12 @@ public class AdjustMaxHealth : PlayerModifier<AdjustMaxHealthData>
             return;
         }
         _data = data;
-        _player.maxHealth += _data.healthIncrease;
+        _player.MaxHealth += _data.healthIncrease;
     }
 
     public override void OnRemove()
     {
-        _player.maxHealth -= _data.healthIncrease;
+        _player.MaxHealth -= _data.healthIncrease;
     }
 }
 
