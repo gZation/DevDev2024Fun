@@ -11,7 +11,7 @@ public class Player : MonoBehaviour, IDamagable
     [Header("Player Stats")]
     public float speed;
     [SerializeField] private float currHealth;
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float maxHealth;
     public float CurrHealth
     {
         get => currHealth;
@@ -63,8 +63,10 @@ public class Player : MonoBehaviour, IDamagable
 
         if (movement == Vector3.zero)
         {
+            animator.SetBool("moving", false);
             return;
         }
+        animator.SetBool("moving", true);
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         Quaternion targetRotation = Quaternion.LookRotation(movement.normalized);
         targetRotation = Quaternion.RotateTowards(
