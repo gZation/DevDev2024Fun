@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PeaProjectile : MonoBehaviour {
+public class PeaProjectile : Damager {
 
 
     private Vector3 direction;
-    private float damage;
     private float projectileSpeed;
 
 
