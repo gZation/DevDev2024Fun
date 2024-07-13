@@ -10,7 +10,7 @@ public class Damager : MonoBehaviour
     public GameObject[] ignoreList;
     private void OnTriggerEnter(Collider other)
     {
-        if (other is IDamagable && ignoreList.Contains(other.gameObject))
+        if (other is IDamagable && !ignoreList.Contains(other.gameObject))
         {
             (other as IDamagable).Damage(damage);
         }
