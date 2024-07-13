@@ -10,6 +10,7 @@ public abstract class Item : MonoBehaviour
         if (other.TryGetComponent(out Player player))
         {
             OnPickUp(player);
+            // TODO: UPDATE UI HERE
             Destroy(gameObject);
         }
     }

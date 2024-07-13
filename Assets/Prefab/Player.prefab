@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6512118709664796048}
   - component: {fileID: 7969337641105590367}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,8 @@ MonoBehaviour:
   speed: 4
   currHealth: 200
   maxHealth: 200
-  wrench: {fileID: 0}
+  wrench: {fileID: 8394991378510910687}
+  infiMove: 0
 --- !u!114 &509468603486924616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!95 &3986701307641644346
 Animator:

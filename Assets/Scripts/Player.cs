@@ -12,15 +12,20 @@ public class Player : MonoBehaviour, IDamagable
     public float speed;
     public float currHealth;
     public float maxHealth = 100;
+
     [Header("Player References")]
-    
     public Damager wrench;
+
+    [Header("Modifier Bools")]
+    public bool infiMove;
 
     // private Refs
     private Rigidbody rb;
     private Animator animator;
     private Vector3 movement = Vector3.zero;
     private Vector2 mousePosition;
+
+    
     
     #region Unity Messages
     private void Awake()
@@ -51,6 +56,10 @@ public class Player : MonoBehaviour, IDamagable
     #region Actions
     public void OnMove(InputValue value)
     {
+        if (infiMove && value.Get<Vector2>() == Vector2.zero) 
+        {
+            return;
+        }
         movement = new Vector3(value.Get<Vector2>().x, 0, value.Get<Vector2>().y);
     }
     public void OnSlash(InputValue value)
