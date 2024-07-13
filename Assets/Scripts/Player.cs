@@ -8,19 +8,25 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Player : MonoBehaviour, IDamagable
 {
-    // Modifiers
+    [Header("Player Stats")]
     public float speed;
-    public Animator animator;
     public float currHealth;
     public float maxHealth = 100;
-    // Refs
+    [Header("Player References")]
+    
+    public Damager wrench;
+
+    // private Refs
     private Rigidbody rb;
+    private Animator animator;
     private Vector3 movement = Vector3.zero;
     private Vector2 mousePosition;
+    
     #region Unity Messages
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
@@ -50,7 +56,7 @@ public class Player : MonoBehaviour, IDamagable
     public void OnSlash(InputValue value)
     {
         // TODO: VFX Slash
-        //animator.Play("slash");
+        animator.Play("slash");
     }
     #endregion
     public void Damage(float amount)
@@ -67,11 +73,13 @@ public class Player : MonoBehaviour, IDamagable
     {
 
     }
-    //public void ApplyModifier<M>(ModifierData data) where M : PlayerModifier<D>
-    //{
-    //    GameObject go = new GameObject(typeof(M).ToString());
-    //    go.AddComponent<M>().OnApply(data);
-    //    go.transform.parent = transform;
-    //}
-    
+    public void ApplyModifier<M, D>(D data) 
+        where M : PlayerModifier<D> 
+        where D : ModifierData
+    {
+        GameObject go = new GameObject(typeof(M).ToString());
+        go.transform.parent = transform;
+        go.AddComponent<M>().OnApply(data);
+        
+    }
 }
