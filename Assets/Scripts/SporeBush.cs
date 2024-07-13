@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SporeBush : MonoBehaviour {
+public class SporeBush : MonoBehaviour, IDamagable {
 
 
     [SerializeField] Transform sporeCloudPrefab;
 
-    [SerializeField] private float health;
-    [SerializeField] private float damage;
-    [SerializeField] private float attackDelay;
+    [SerializeField] private float health = 50;
+    [SerializeField] private float damage = 30;
+    [SerializeField] private float attackSpeed = 1;
+    [SerializeField] private float attackDelay = 3;
 
 
     private float attackTimer;
@@ -28,11 +29,15 @@ public class SporeBush : MonoBehaviour {
     }
 
     private void Attack() {
-        Debug.Log("Damaged player");
         attackTimer = attackDelay;
-        Transform sporeCloudTransform = Instantiate(sporeCloudPrefab, transform.position, Quaternion.identity);
-        SporeCloud sporeCloud = sporeCloudTransform.GetComponent<SporeCloud>();
-        sporeCloud.Setup(GetComponent<SphereCollider>().radius * 2);
+        SporeCloud sporeCloud = Instantiate(sporeCloudPrefab, transform.position, Quaternion.identity).GetComponent<SporeCloud>();
+        sporeCloud.Setup(GetComponent<SphereCollider>().radius, damage, attackSpeed);
     }
 
+    public void Damage(float amount) {
+        health -= amount;
+        if (health <= 0) {
+            Destroy(gameObject);
+        }
+    }
 }
