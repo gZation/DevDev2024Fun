@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4472135095812625249}
   - component: {fileID: 2632630905078780061}
   - component: {fileID: 2195903782209425774}
-  - component: {fileID: 6967874399093703466}
   m_Layer: 0
   m_Name: SporeBushVisual
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6967874399093703466
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927384080529286621}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2832582204707469706
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +94,7 @@ GameObject:
   - component: {fileID: 161471180091902916}
   - component: {fileID: 1662280492640944652}
   - component: {fileID: 7491578439662469303}
+  - component: {fileID: -4756991526694102931}
   m_Layer: 0
   m_Name: SporeBush
   m_TagString: Untagged
@@ -151,13 +130,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358af99d67a3aff41a0e1b1da64887a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sporeCloudPrefab: {fileID: 2360606026673077750, guid: 87d094a16a11f8c438a7c2020c908759,
-    type: 3}
   health: 50
   damage: 30
-  attackSpeed: 1
   attackDelay: 3
+  sporeCloudPrefab: {fileID: 2360606026673077750, guid: 87d094a16a11f8c438a7c2020c908759,
+    type: 3}
+  growthSpeed: 1
 --- !u!135 &7491578439662469303
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832582204707469706}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &-4756991526694102931
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,9 +172,9 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}

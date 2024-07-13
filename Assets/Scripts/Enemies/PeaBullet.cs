@@ -3,13 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PeaBullet : MonoBehaviour {
-    // Start is called before the first frame update
-    void Start() {
-        
+
+
+    private Vector3 direction;
+    private float damage;
+    private float projectileSpeed;
+
+
+    public void Setup(Vector3 direction, float damage, float projectileSpeed) {
+        this.direction = direction;
+        this.damage = damage;
+        this.projectileSpeed = projectileSpeed;
     }
 
-    // Update is called once per frame
-    void Update() {
-        
+    private void Update() {
+        transform.position += direction * projectileSpeed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.TryGetComponent(out Player player)) {
+            player.Damage(damage);
+            Destroy(gameObject);
+        }
+    }
+
 }

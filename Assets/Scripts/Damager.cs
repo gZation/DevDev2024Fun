@@ -7,9 +7,9 @@ public class Damager : MonoBehaviour
     public float damage;
     private void OnTriggerEnter(Collider other)
     {
-        if (other is IDamagable)
+        if (other.TryGetComponent(out IDamagable damagable) && !ignoreList.Contains(other.gameObject))
         {
-            (other as IDamagable).Damage(damage);
+            damagable.Damage(damage);
         }
     }
 }

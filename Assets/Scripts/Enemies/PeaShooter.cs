@@ -6,13 +6,15 @@ public class PeaShooter : Enemy {
 
 
     [SerializeField] Transform peaBulletPrefab;
-    [SerializeField] private float projectileSpeed = 1;
+    [SerializeField] Transform bulletSpawnPosition;
+    [SerializeField] private float projectileSpeed = 3;
 
 
     protected override void Attack(Player player) {
         base.Attack(player);
-        SporeCloud sporeCloud = Instantiate(peaBulletPrefab, transform.position, Quaternion.identity).GetComponent<SporeCloud>();
-        sporeCloud.Setup(GetComponent<SphereCollider>().radius, damage, projectileSpeed);
+        transform.LookAt(player.transform.position);
+        PeaBullet bullet = Instantiate(peaBulletPrefab, bulletSpawnPosition.position, Quaternion.identity).GetComponent<PeaBullet>();
+        bullet.Setup(transform.forward, damage, projectileSpeed);
     }
 
 }
