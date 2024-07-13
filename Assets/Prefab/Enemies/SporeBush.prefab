@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2042706936153221186}
   m_Layer: 8
-  m_Name: ProjectileLaunchPosition
+  m_Name: ProjectileSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,11 +167,69 @@ MonoBehaviour:
   attackDelay: 3
   sporeProjectilePrefab: {fileID: 4371684627173135906, guid: 61390382fa4ecad40b7ee32798d86900,
     type: 3}
-  projectileLaunchPosition: {fileID: 2042706936153221186}
-  projectileVelocity: {x: 2, y: 5}
-  numProjectiles: 1
-  explosionRadius: 1
+  projectileSpawnPosition: {fileID: 2042706936153221186}
+  launchCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0008239746
+      value: 0
+      inSlope: 1.6298528
+      outSlope: 1.6298528
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04992277
+    - serializedVersion: 3
+      time: 0.86678135
+      value: 0.449924
+      inSlope: -2.37154
+      outSlope: -2.37154
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.032466725
+      outWeight: 0.15386952
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -3.9063368
+      outSlope: -3.9063368
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1367803
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  projectileSpeed: 2
+  rangeCollider: {fileID: 7491578439662469303}
+  explosionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   growthSpeed: 1.5
+  explosionRadius: 1
+  numProjectiles: 6
 --- !u!135 &7491578439662469303
 SphereCollider:
   m_ObjectHideFlags: 0
