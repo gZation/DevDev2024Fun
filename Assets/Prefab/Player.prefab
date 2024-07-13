@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6652190721294592803}
   - component: {fileID: 6512118709664796048}
   - component: {fileID: 7969337641105590367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 509468603486924616}
   - component: {fileID: 4646264618652361888}
   - component: {fileID: 3986701307641644346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 2663355858864656955}
   - component: {fileID: 868694565614752740}
   - component: {fileID: 5513578719086390659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 4397569799032455986}
   - component: {fileID: 203892224863392784}
   - component: {fileID: 8394991378510910687}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Wrench
   m_TagString: Untagged
   m_Icon: {fileID: 0}

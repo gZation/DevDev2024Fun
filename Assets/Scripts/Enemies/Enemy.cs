@@ -7,10 +7,10 @@ public abstract class Enemy : MonoBehaviour, IDamagable {
 
     [SerializeField] protected float health = 50;
     [SerializeField] protected float damage = 30;
-    [SerializeField] protected float attackDelay = 3;
+    [SerializeField] private float attackDelay = 3;
 
 
-    protected float attackTimer;
+    private float attackTimer;
 
 
     protected virtual void Update() {
@@ -25,7 +25,9 @@ public abstract class Enemy : MonoBehaviour, IDamagable {
         }
     }
 
-    protected virtual void Attack(Player player) {
+    protected abstract void Attack(Player player);
+
+    protected virtual void ResetAttackTimer() {
         attackTimer = attackDelay;
     }
 

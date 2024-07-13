@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PeaBullet : MonoBehaviour {
+public class PeaProjectile : MonoBehaviour {
 
 
     private Vector3 direction;
@@ -23,8 +23,8 @@ public class PeaBullet : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.TryGetComponent(out Player player)) {
             player.Damage(damage);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
 }

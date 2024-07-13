@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 782860369365110151}
   - component: {fileID: 5027725337948261146}
   - component: {fileID: 7792461328256179068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8676276345699987574}
   - component: {fileID: 6805533389733450844}
   - component: {fileID: 3483275800739038046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 1767114907394608775}
   - component: {fileID: 7428275722109439700}
   - component: {fileID: 3872554629982542445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9138638860218312573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PeaShooterVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 6000049047740303888}
   - component: {fileID: 1510194198761637454}
   - component: {fileID: 9029623641101299017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PeaShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,11 +353,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  damage: 20
-  attackDelay: 2
+  damage: 30
+  attackDelay: 3
   peaBulletPrefab: {fileID: 1284824311933956366, guid: 38b3715b68fdc33419f8d831d3cbef4a,
     type: 3}
-  projectileSpeed: 1
+  bulletSpawnPosition: {fileID: 8676276345699987574}
+  projectileSpeed: 5
 --- !u!136 &9029623641101299017
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ GameObject:
   - component: {fileID: 6281536618071919335}
   - component: {fileID: 3589069522736466022}
   - component: {fileID: 3134168439258838061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
