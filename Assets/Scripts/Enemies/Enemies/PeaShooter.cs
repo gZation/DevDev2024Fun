@@ -9,6 +9,9 @@ public class PeaShooter : Enemy {
     [SerializeField] Transform projectileSpawnPosition;
     [SerializeField] Transform peaProjectilePrefab;
     [SerializeField] private float projectileSpeed = 5;
+    [SerializeField] private bool useHoming = false;
+    [SerializeField] private float projectileHomingSpeed;
+    [SerializeField] private float projectileHomingAcceleration;
     [SerializeField] private float turnSpeed = 15;
 
 
@@ -28,7 +31,11 @@ public class PeaShooter : Enemy {
         target = player;
 
         PeaProjectile peaProjectile = Instantiate(peaProjectilePrefab, projectileSpawnPosition.position, Quaternion.identity).GetComponent<PeaProjectile>();
-        peaProjectile.Setup(target.transform.position - transform.position, damage, projectileSpeed);
+        if (useHoming) {
+            peaProjectile.Setup(player, damage, projectileSpeed, projectileHomingSpeed, projectileHomingAcceleration);
+        } else {
+            peaProjectile.Setup(player, damage, projectileSpeed);
+        }
 
         ResetAttackTimer();
     }
