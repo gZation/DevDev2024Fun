@@ -36,6 +36,10 @@ public class Player : MonoBehaviour, IDamagable
         set
         {
             currHealth = value;
+            if (currHealth > maxHealth)
+            {
+                currHealth = maxHealth; 
+            }
             UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);   
         }
     }
@@ -143,7 +147,7 @@ public class Player : MonoBehaviour, IDamagable
     public void OnPlayerDeath()
     {
         SceneManager.LoadSceneAsync("death");
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
     public void ApplyModifier<M, D>(D data) 
         where M : PlayerModifier<D> 

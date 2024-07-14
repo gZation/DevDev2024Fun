@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
-            audioSource.Play();
+            audioSource?.Play();
             animator.Play("open");
         }
     }
@@ -23,7 +23,7 @@ public class Door : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
-            audioSource.Play();
+            audioSource?.Play();
             animator.Play("close");
         }
     }

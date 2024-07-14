@@ -9,7 +9,6 @@ public class Teleporter : MonoBehaviour
     [SerializeField] private string nextScene;
     [SerializeField] private float stayTime;
     private float cooldown;
-    private bool teleporting;
     private AudioSource audioSource;
     private new ParticleSystem particleSystem;
     private void Awake()
@@ -33,9 +32,19 @@ public class Teleporter : MonoBehaviour
         if (other.TryGetComponent(out Player player))
         {
             if (cooldown > Time.time) return;
-            player.particleSystem.Stop();
-            player.transform.position = Vector3.forward * 5f;
-            Camera.main.transform.position = Vector3.up * 8 + Vector3.forward * 1.5f;
+            if (nextScene.Contains("level"))
+            {
+                
+                player.particleSystem.Stop();
+                player.transform.position = Vector3.forward * 5f;
+                Camera.main.transform.position = Vector3.up * 8 + Vector3.forward * 1.5f;
+                DontDestroyOnLoad(player.transform.parent.gameObject);
+            }
+            else
+            {
+                Destroy(player.transform.parent.gameObject);
+            }
+            
             SceneManager.LoadSceneAsync(nextScene);
         }
     }

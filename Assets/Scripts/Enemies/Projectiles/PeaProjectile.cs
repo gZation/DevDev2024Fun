@@ -32,6 +32,7 @@ public class PeaProjectile : Damager {
 
     private void Update() {
         if (useHoming) {
+            if (player == null) Destroy(gameObject);
             direction = Vector3.Slerp(direction, (player.transform.position - new Vector3(transform.position.x, 0, transform.position.z)).normalized, Time.deltaTime * homingSpeed);
             homingSpeed += homingAcceleration * Time.deltaTime;
         }

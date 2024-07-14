@@ -8,7 +8,7 @@ public class ItemBarrel : MonoBehaviour, IDamagable
     private AudioSource audioSource;
     private MeshRenderer meshRenderer;
     private MeshCollider meshCollider;
-    private new ParticleSystem particleSystem;
+    //private new ParticleSystem particleSystem;
     private void Awake()
     {
         meshRenderer = GetComponentInChildren<MeshRenderer>();
@@ -19,7 +19,7 @@ public class ItemBarrel : MonoBehaviour, IDamagable
         }
         meshCollider = GetComponentInChildren<MeshCollider>();
         audioSource = GetComponent<AudioSource>();
-        particleSystem = GetComponent<ParticleSystem>();
+        //particleSystem = GetComponent<ParticleSystem>();
     }
     public void Damage(float amount)
     {
@@ -42,7 +42,7 @@ public class ItemBarrel : MonoBehaviour, IDamagable
                 audioSource?.Play();
                 meshRenderer.enabled = false;
                 meshCollider.enabled = false;
-                particleSystem?.Play();
+                //particleSystem?.Play();
                 return;
             }
         }
