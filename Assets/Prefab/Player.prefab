@@ -7071,7 +7071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currHealth: 200
   maxHealth: 200
-  speed: 4
+  speed: 5
   attackCooldown: 0.33333334
   wrench: {fileID: 5059738674335147088}
   collectedItems: []
