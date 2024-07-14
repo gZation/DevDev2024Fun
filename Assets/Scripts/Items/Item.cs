@@ -8,6 +8,7 @@ public abstract class Item : MonoBehaviour
     [Header("Item Data")]
     [SerializeField] private Sprite itemSprite;
     [SerializeField] private string itemName;
+    [SerializeField] private float weight;
     [SerializeField, TextArea] private string description;
 
     //private SpriteRenderer spriteRenderer;

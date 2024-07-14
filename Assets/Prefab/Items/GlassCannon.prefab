@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6067235765340719504
+--- !u!1 &1055781750411542909
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5635166297942129111}
-  - component: {fileID: 3898643930335793442}
-  - component: {fileID: 4888005796370884121}
-  - component: {fileID: 3424978155897661241}
+  - component: {fileID: 2763384674768229926}
+  - component: {fileID: 4922860761429255961}
+  - component: {fileID: 6421348655802645303}
+  - component: {fileID: 6920794898403353277}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5635166297942129111
+--- !u!4 &2763384674768229926
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067235765340719504}
+  m_GameObject: {fileID: 1055781750411542909}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6281033741196146976}
+  m_Father: {fileID: 4328417134221837537}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3898643930335793442
+--- !u!212 &4922860761429255961
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067235765340719504}
+  m_GameObject: {fileID: 1055781750411542909}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87c0c95b7b1f1864f8219bed2b6fd771, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddc9ed73fc0c6434999507e3a90d5533, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,26 +86,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4888005796370884121
+--- !u!114 &6421348655802645303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067235765340719504}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1055781750411542909}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40a5791d60cf01f4bb796b0e53b049f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3424978155897661241
+--- !u!95 &6920794898403353277
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6067235765340719504}
+  m_GameObject: {fileID: 1055781750411542909}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 32004ce4228e5164ab5ff30702de635a, type: 2}
@@ -119,7 +119,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &6897934805995045389
+--- !u!1 &2786979948444848414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,39 +127,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6281033741196146976}
-  - component: {fileID: 5373535340717449625}
-  - component: {fileID: 1753012289827446091}
+  - component: {fileID: 4328417134221837537}
+  - component: {fileID: 1250723689458379845}
+  - component: {fileID: 1726588141315553815}
   m_Layer: 0
-  m_Name: SpeedBoots
+  m_Name: GlassCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6281033741196146976
+--- !u!4 &4328417134221837537
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897934805995045389}
+  m_GameObject: {fileID: 2786979948444848414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.57, y: 0.783, z: 12.4}
+  m_LocalPosition: {x: -19.234062, y: 0.593, z: 7.8763995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5635166297942129111}
+  - {fileID: 2763384674768229926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5373535340717449625
+--- !u!65 &1250723689458379845
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897934805995045389}
+  m_GameObject: {fileID: 2786979948444848414}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -174,23 +174,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1753012289827446091
+--- !u!114 &1726588141315553815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897934805995045389}
+  m_GameObject: {fileID: 2786979948444848414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3113cb8e1d82442b182c0cedce01a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6931b29ca942b864aaa3e7a1a5677df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: 87c0c95b7b1f1864f8219bed2b6fd771, type: 3}
-  itemName: SpeedBoots
+  itemSprite: {fileID: 21300000, guid: ddc9ed73fc0c6434999507e3a90d5533, type: 3}
+  itemName: Shattered Glass Cannon
   weight: 10
-  description: 'Increase your movement speed, but permanent movement.
-
-    "Looks
-    like someone forgot to close the wiring. They were probably done repairing them...
-    right?"'
+  description: 
+  healthDecrease: 100
+  damageIncrease: 10
