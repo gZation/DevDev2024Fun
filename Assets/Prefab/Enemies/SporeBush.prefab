@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358af99d67a3aff41a0e1b1da64887a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
   damage: 30
   attackDelay: 3
+  health: 50
   sporeProjectilePrefab: {fileID: 4371684627173135906, guid: 61390382fa4ecad40b7ee32798d86900,
     type: 3}
   projectileSpawnPosition: {fileID: 2042706936153221186}
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   growthSpeed: 1.5
-  explosionRadius: 1
+  explosionRadius: 2
   numProjectiles: 6
 --- !u!135 &7491578439662469303
 SphereCollider:
@@ -200,7 +200,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.5
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &-4756991526694102931
 SphereCollider:

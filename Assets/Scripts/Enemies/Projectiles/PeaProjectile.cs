@@ -19,10 +19,8 @@ public class PeaProjectile : Damager {
         transform.position += direction * projectileSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.TryGetComponent(out Player player)) {
-            player.Damage(damage);
-        }
+    protected override void OnTriggerEnter(Collider other) {
+        base.OnTriggerEnter(other);
         Destroy(gameObject);
     }
 

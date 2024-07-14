@@ -5,8 +5,9 @@ using UnityEngine;
 public class PeaShooter : Enemy {
 
 
-    [SerializeField] Transform peaProjectilePrefab;
+    [SerializeField] Transform peaShooterRotateTransform;
     [SerializeField] Transform projectileSpawnPosition;
+    [SerializeField] Transform peaProjectilePrefab;
     [SerializeField] private float projectileSpeed = 5;
     [SerializeField] private float turnSpeed = 15;
 
@@ -19,7 +20,7 @@ public class PeaShooter : Enemy {
 
         if (target != null) {
             Vector3 targetDirection = new Vector3(target.transform.position.x, 0, target.transform.position.z) - transform.position;
-            transform.forward = Vector3.Slerp(transform.forward, targetDirection, Time.deltaTime * turnSpeed);
+            peaShooterRotateTransform.forward = Vector3.Slerp(peaShooterRotateTransform.forward, targetDirection, Time.deltaTime * turnSpeed);
         }
     }
 
