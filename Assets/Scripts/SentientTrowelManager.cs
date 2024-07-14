@@ -9,13 +9,21 @@ public class SentientTrowelManager : MonoBehaviour {
 
 
 
-    [SerializeField] private Transform trowelPrefab;
+    [SerializeField] private Transform sentientTrowelParentPrefab;
     [SerializeField] private float rotateSpeed = 150;
-    [SerializeField] private float rotateRadius = 1;
+    [SerializeField] private int initialTrowelCount = 0;
 
 
-    private int trowelCount;
-    private List<Transform> trowels;
+    public enum State {
+        Idle,
+        SelfAttack
+    }
+
+    public State state = State.Idle;
+
+
+    private List<Transform> trowelParents;
+    private List<Vector3> previousPositions;
 
 
     private void Awake() {
@@ -25,26 +33,68 @@ public class SentientTrowelManager : MonoBehaviour {
             Debug.LogError("There is more than one SentientTrowelManager " + this);
         }
 
-        trowels = new List<Transform>();
+        trowelParents = new List<Transform>();
+        previousPositions = new List<Vector3>();
+
+        for (int i = 0; i < initialTrowelCount; i++) {
+            AddTrowel();
+        }
     }
 
     private void Update() {
-        transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
+        switch (state) {
+            case State.Idle:
+                if (IsStationary()) {
+                    state = State.SelfAttack;
+                    SetSelfAttack(true);
+                } else {
+                    transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
+                    previousPositions.Add(transform.position);
+                    if (previousPositions.Count >= 5) {
+                        previousPositions.RemoveAt(0);
+                    }
+                }
+                break;
+            case State.SelfAttack:
+                if (!IsStationary()) {
+                    state = State.Idle;
+                    SetSelfAttack(false);
+                }
+                break;
+        }
     }
 
     public void AddTrowel() {
-        trowelCount++;
-        trowels.Add(Instantiate(trowelPrefab, transform));
+        trowelParents.Add(Instantiate(sentientTrowelParentPrefab, transform));
         UpdateTrowels();
     }
 
     private void UpdateTrowels() {
         float angle = 0;
-        foreach (Transform trowel in trowels) {
-            trowel.localPosition = new Vector3(rotateRadius * Mathf.Cos(angle), 1, rotateRadius * Mathf.Sin(angle));
-            trowel.localEulerAngles = new Vector3(0, angle * Mathf.Rad2Deg, 0);
-            angle += 2 * Mathf.PI / trowels.Count;
+        foreach (Transform trowelParent in trowelParents) {
+            trowelParent.localEulerAngles = new Vector3(0, angle * Mathf.Rad2Deg, 0);
+            angle += 2 * Mathf.PI / trowelParents.Count;
         }
+    }
+
+    private void SetSelfAttack(bool selfAttack) {
+        foreach (Transform trowelParent in trowelParents) {
+            trowelParent.GetComponentInChildren<Animator>().SetBool("SelfAttack", selfAttack);
+        }
+    }
+
+    private bool IsStationary() {
+        if (previousPositions == null || previousPositions.Count == 0) {
+            return false;
+        }
+
+        foreach (Vector3 position in previousPositions) {
+            if (position != transform.position) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

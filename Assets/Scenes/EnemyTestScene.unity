@@ -446,6 +446,74 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1001 &423205705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.121113
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003346226435460189, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_Name
+      value: SentientTrowel (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de5c53377378263479807479a883c7d2, type: 3}
 --- !u!1001 &449669070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -514,6 +582,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6183036ef5ee3b40bda16fedd9fd5b8, type: 3}
+--- !u!1001 &471169988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.121113
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003346226435460189, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_Name
+      value: SentientTrowel (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de5c53377378263479807479a883c7d2, type: 3}
 --- !u!1001 &737200195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,6 +1271,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368890135}
   m_CullTransparentMesh: 1
+--- !u!1001 &1382238891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.121113
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143935103594147724, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003346226435460189, guid: de5c53377378263479807479a883c7d2,
+        type: 3}
+      propertyPath: m_Name
+      value: SentientTrowel (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de5c53377378263479807479a883c7d2, type: 3}
 --- !u!1001 &1517334972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,15 +1420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5059738674335147088, guid: 7225b9077adea904e865d83cf2e0915e,
-        type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5137476464186722350, guid: 7225b9077adea904e865d83cf2e0915e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5137476464186722350, guid: 7225b9077adea904e865d83cf2e0915e,
         type: 3}
@@ -1234,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 5137476464186722350, guid: 7225b9077adea904e865d83cf2e0915e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5137476464186722350, guid: 7225b9077adea904e865d83cf2e0915e,
         type: 3}
@@ -1271,19 +1470,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5287671472740682597, guid: 7225b9077adea904e865d83cf2e0915e,
-        type: 3}
-      propertyPath: m_Name
-      value: Trowel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8788497299189823138, guid: 7225b9077adea904e865d83cf2e0915e,
-        type: 3}
-      propertyPath: m_Name
-      value: SententTrowelLogic
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1544044954089843515, guid: 7225b9077adea904e865d83cf2e0915e, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7225b9077adea904e865d83cf2e0915e, type: 3}
@@ -1668,22 +1856,22 @@ PrefabInstance:
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
@@ -1693,7 +1881,7 @@ PrefabInstance:
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 455966483737484074, guid: 357267f6ca46ae64ca54326156305ef5,
         type: 3}
@@ -1709,6 +1897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SentientTrowelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989583895584128752, guid: 357267f6ca46ae64ca54326156305ef5,
+        type: 3}
+      propertyPath: trowelCount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1801,3 +1994,6 @@ SceneRoots:
   - {fileID: 6598245651943087330}
   - {fileID: 449669070}
   - {fileID: 1517334972}
+  - {fileID: 423205705}
+  - {fileID: 1382238891}
+  - {fileID: 471169988}
