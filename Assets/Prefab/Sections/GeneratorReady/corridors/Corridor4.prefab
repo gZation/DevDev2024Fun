@@ -2362,7 +2362,7 @@ GameObject:
   - component: {fileID: 4504115971849478535}
   - component: {fileID: 3277197347913352978}
   m_Layer: 0
-  m_Name: Corridor4
+  m_Name: corridor4
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2398,8 +2398,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - corridor
+  - corridor4
   CreatesTags:
   - room
+  - corridor
   Exits: {fileID: 736388221002352657}
   Bounds: {fileID: 6317000642351743173}
   DeadEndChance: 0
