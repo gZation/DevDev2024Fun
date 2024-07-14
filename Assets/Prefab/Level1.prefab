@@ -59,15 +59,12 @@ MonoBehaviour:
   - {fileID: 3277197347913352978, guid: e493fa09673041149838af63be7e609f, type: 3}
   - {fileID: 759548184362970571, guid: e001fbb8aaa39824ba7dd0a7cc8c34f1, type: 3}
   - {fileID: 5374202910396662766, guid: 3009d4a9548ce8745a5f49ee8b4356e1, type: 3}
+  - {fileID: -1680980979097877927, guid: 1de63186cb9478b40a940e4be449f099, type: 3}
   DeadEnds:
-  - {fileID: 7768393312699903451, guid: 1de63186cb9478b40a940e4be449f099, type: 3}
-  - {fileID: 3842619338976489040, guid: c07f935aee9a4e743817df2b02618874, type: 3}
+  - {fileID: 5132568563421340493, guid: 94b9dfb4cda1eac4fb26a2123c79d448, type: 3}
   InitialSectionTags:
   - start
   SpecialRules:
-  - Tag: room
-    MinAmount: 5
-    MaxAmount: 25
   - Tag: final
     MinAmount: 1
     MaxAmount: 1

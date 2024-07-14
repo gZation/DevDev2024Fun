@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 5865913199018764660}
   - component: {fileID: 4348205003767057366}
   m_Layer: 0
-  m_Name: StartingRoom
+  m_Name: startingroom
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

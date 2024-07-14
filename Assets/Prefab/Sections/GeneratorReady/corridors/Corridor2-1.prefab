@@ -209,7 +209,12 @@ PrefabInstance:
     - target: {fileID: 5901421602389515034, guid: 38b835bda377aea4bbb9454fd10bdfb7,
         type: 3}
       propertyPath: m_Name
-      value: Corridor2-1
+      value: corridor2-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189182979731988781, guid: 38b835bda377aea4bbb9454fd10bdfb7,
+        type: 3}
+      propertyPath: DeadEndChance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
