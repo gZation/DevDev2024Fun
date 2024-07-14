@@ -48,8 +48,9 @@ MonoBehaviour:
   sentientTrowelParentPrefab: {fileID: 7000404506013341573, guid: ae7590202c6d8db4ebae87b9cb99c63d,
     type: 3}
   rotateSpeed: 150
-  state: 0
-  trowelCount: 10
+  previousPositionSamplingCount: 2
+  previousPositionSamplingInterval: 0.1
+  initialTrowelCount: 0
 --- !u!114 &1103104907669028761
 MonoBehaviour:
   m_ObjectHideFlags: 0
