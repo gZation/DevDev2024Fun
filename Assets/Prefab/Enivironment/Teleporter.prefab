@@ -5202,8 +5202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6e7baa606f6ba4aae2c4cea9d7d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: level1
-  stayTime: 10
+  nextScene: 
+  stayTime: 3
 --- !u!136 &2577197342662633224
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5237,7 +5237,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c905abc95d3ec545b075b26ca56840a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8c6da8ceca807a34382ccb14488c422c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1

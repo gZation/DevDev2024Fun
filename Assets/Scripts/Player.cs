@@ -147,7 +147,7 @@ public class Player : MonoBehaviour, IDamagable
     public void OnPlayerDeath()
     {
         SceneManager.LoadSceneAsync("death");
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
     public void ApplyModifier<M, D>(D data) 
         where M : PlayerModifier<D> 
