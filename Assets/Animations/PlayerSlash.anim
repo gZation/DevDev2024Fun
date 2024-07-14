@@ -338,7 +338,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Budding/char_Rarm/trowel
+    path: Budding/char_Rarm/trowel/Stem/Head
     classID: 135
     script: {fileID: 0}
     flags: 0
@@ -423,7 +423,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3216974213
+      path: 2057583800
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 135
@@ -1532,7 +1532,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Budding/char_Rarm/trowel
+    path: Budding/char_Rarm/trowel/Stem/Head
     classID: 135
     script: {fileID: 0}
     flags: 0
