@@ -1465,11 +1465,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - corridor
+  - corridor1
   CreatesTags:
   - room
+  - corridor
   Exits: {fileID: 3362565390827883932}
   Bounds: {fileID: 487463006427549638}
-  DeadEndChance: 30
+  DeadEndChance: 0
 --- !u!1 &6445119341737908998
 GameObject:
   m_ObjectHideFlags: 0

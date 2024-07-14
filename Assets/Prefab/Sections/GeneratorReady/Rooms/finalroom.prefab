@@ -2239,8 +2239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - room
   - final
+  - room
   CreatesTags: []
   Exits: {fileID: 0}
   Bounds: {fileID: 791022759412776980}
