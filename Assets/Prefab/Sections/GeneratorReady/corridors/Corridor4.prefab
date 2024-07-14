@@ -2402,4 +2402,4 @@ MonoBehaviour:
   - room
   Exits: {fileID: 736388221002352657}
   Bounds: {fileID: 6317000642351743173}
-  DeadEndChance: 10
+  DeadEndChance: 0

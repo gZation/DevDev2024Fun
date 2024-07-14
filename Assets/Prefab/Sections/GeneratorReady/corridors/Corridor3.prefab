@@ -147,7 +147,7 @@ MonoBehaviour:
   - room
   Exits: {fileID: 6642205091493777972}
   Bounds: {fileID: 3452607808106994507}
-  DeadEndChance: 10
+  DeadEndChance: 0
 --- !u!1 &1732961074428991964
 GameObject:
   m_ObjectHideFlags: 0
