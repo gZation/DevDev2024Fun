@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &861689935394222856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3413780496616268474}
+  - component: {fileID: 8115285101608214053}
+  m_Layer: 0
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3413780496616268474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861689935394222856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8115285101608214053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861689935394222856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6626a6e366a9c48a48525cde4050d0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Seed: 0
+  SectionContainer: {fileID: 0}
+  MaxLevelSize: 40
+  MaxAllowedOrder: 10
+  Sections:
+  - {fileID: 4348205003767057366, guid: 435721198914e8543a719a5e67b14c42, type: 3}
+  - {fileID: 5374202910396662766, guid: 3009d4a9548ce8745a5f49ee8b4356e1, type: 3}
+  - {fileID: 8189182979731988781, guid: 9cc433f5608434b498ac3e877201d56c, type: 3}
+  - {fileID: 7656473979518399970, guid: b5dd680a06111814eb4996a1a14a82ce, type: 3}
+  - {fileID: 1290335734997969072, guid: 20cbc2d72a06e6444af674c7a0931e1a, type: 3}
+  - {fileID: 3277197347913352978, guid: e493fa09673041149838af63be7e609f, type: 3}
+  - {fileID: 5974021984785359391, guid: 6401a74297b41a042b73e1dc7e673616, type: 3}
+  - {fileID: 544353652071761246, guid: bb8bf96b970084a4aa21c5ac99b9c3e6, type: 3}
+  - {fileID: 3208951229507850264, guid: 35fc50d4aee655d43bcc18389277ad3d, type: 3}
+  - {fileID: 759548184362970571, guid: e001fbb8aaa39824ba7dd0a7cc8c34f1, type: 3}
+  - {fileID: -1680980979097877927, guid: 1de63186cb9478b40a940e4be449f099, type: 3}
+  DeadEnds:
+  - {fileID: 5132568563421340493, guid: 94b9dfb4cda1eac4fb26a2123c79d448, type: 3}
+  InitialSectionTags:
+  - start
+  SpecialRules:
+  - Tag: final
+    MinAmount: 1
+    MaxAmount: 1
+  - Tag: room
+    MinAmount: 12
+    MaxAmount: 16
+  - Tag: treasure
+    MinAmount: 8
+    MaxAmount: 12
