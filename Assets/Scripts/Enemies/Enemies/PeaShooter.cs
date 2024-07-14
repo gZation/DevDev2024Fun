@@ -36,7 +36,7 @@ public class PeaShooter : Enemy {
         } else {
             peaProjectile.Setup(player, damage, projectileSpeed);
         }
-
+        audioSource.Play();
         ResetAttackTimer();
     }
 

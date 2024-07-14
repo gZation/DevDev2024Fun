@@ -42,6 +42,7 @@ public class SporeBush : Enemy {
 
             spArgs.launchAngleY += 2 * Mathf.PI / numProjectiles;
         }
+        audioSource.Play();
     }
 
 }

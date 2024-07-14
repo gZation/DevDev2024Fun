@@ -7,10 +7,14 @@ public abstract class Attacker : MonoBehaviour {
     [Header("Attacker")]
     [SerializeField] protected float damage = 30;
     [SerializeField] private float attackDelay = 3;
+    protected AudioSource audioSource;
 
 
     protected float attackTimer;
-
+    protected virtual void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     protected virtual void Update() {
         if (attackTimer > 0) {

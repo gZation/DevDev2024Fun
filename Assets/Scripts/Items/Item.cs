@@ -18,6 +18,7 @@ public abstract class Item : MonoBehaviour
     public string Lore => lore;
     public string Debuff => debuff;
     public string Buff => buff;
+    protected bool isCollectible = true;
 
     //private SpriteRenderer spriteRenderer;
     //private void Awake()
@@ -33,8 +34,11 @@ public abstract class Item : MonoBehaviour
         if (other.TryGetComponent(out Player player))
         {
             OnPickUp(player);
-            player.collectedItems.Add(this);
-            UIManager.Instance.AddNewCard(this);
+            if (isCollectible)
+            {
+                player.collectedItems.Add(this);
+                UIManager.Instance.AddNewCard(this);
+            }
             Destroy(gameObject);
         }
     }

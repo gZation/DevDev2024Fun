@@ -44,6 +44,10 @@ public class Player : MonoBehaviour, IDamagable
         set
         {
             maxHealth = value;
+            if (maxHealth > currHealth)
+            {
+                CurrHealth += value;
+            }
             if (maxHealth < currHealth)
             {
                 CurrHealth = value;
@@ -68,10 +72,14 @@ public class Player : MonoBehaviour, IDamagable
     private Animator animator;
     private Vector3 movement = Vector3.zero;
     private Vector2 mousePosition;
+    private AudioSource audioSource;
+    public new ParticleSystem particleSystem;
     
     #region Unity Messages
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         DontDestroyOnLoad(gameObject);
@@ -125,6 +133,7 @@ public class Player : MonoBehaviour, IDamagable
     public void Damage(float amount)
     {
         CurrHealth -= amount;
+        audioSource.Play();
         if (CurrHealth <= 0)
         {
             OnPlayerDeath();

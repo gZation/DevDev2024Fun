@@ -17,6 +17,7 @@ public class Chomper : Enemy {
 
         hasHitThisAttack = false;
         animator.SetTrigger("Attack");
+        audioSource.Play();
     }
 
     private void OnCollisionEnter(Collision collision) {

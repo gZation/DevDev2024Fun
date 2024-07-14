@@ -10,8 +10,9 @@ public abstract class Enemy : ProximityAttacker, IDamagable {
     [SerializeField] protected Image healthFill;
     private float startingHealth;
 
-    protected void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         startingHealth = health;
     }
 

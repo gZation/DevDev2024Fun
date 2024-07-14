@@ -9,6 +9,10 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Vector3 _offset;
     [SerializeField] private float _speed;
     private Camera _camera;
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
     private void Start()
     {
         _camera = GetComponent<Camera>();

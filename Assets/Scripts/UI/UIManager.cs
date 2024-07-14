@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
     #endregion
     [Header("Canvas UI Refs")]
     [SerializeField] private Image healthfill;
+    [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private RectTransform healthbar;
     [SerializeField] private Transform cardInventory;
 
@@ -33,11 +35,13 @@ public class UIManager : MonoBehaviour
     {
         if (healthfill == null) return;
         healthfill.fillAmount = currHealth / maxHealth;
+        healthText.text = $"{currHealth}/{maxHealth}";
     }
     public void UpdatePlayerMaxHealth(float maxHealth)
     {
         if (healthbar == null) return;
         healthbar.offsetMax = new Vector2(maxHealth * 2 - 1900, healthbar.offsetMax.y);
+        healthText.text = $"{healthfill.fillAmount * maxHealth}/{maxHealth}";
     }
     public void AddNewCard(Item item)
     {
