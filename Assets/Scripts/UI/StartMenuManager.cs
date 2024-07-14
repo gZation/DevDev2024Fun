@@ -12,22 +12,33 @@ public class StartMenuManager : MonoBehaviour {
     [SerializeField] private Button quitButton;
     [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject introCutscene;
+    [SerializeField] private GameObject title;
 
 
     private void Awake() {
         startButton.onClick.AddListener(() => {
-            gameObject.SetActive(false);
+            Hide();
             introCutscene.SetActive(true);
         });
 
         creditsButton.onClick.AddListener(() => {
             creditsMenu.SetActive(true);
-            gameObject.SetActive(false);
+            Hide();
         });
 
         quitButton.onClick.AddListener(() => {
             Application.Quit();
         });
+    }
+
+    public void Show() {
+        gameObject.SetActive(true);
+        title.gameObject.SetActive(true);
+    }
+
+    public void Hide() {
+        gameObject.SetActive(false);
+        title.gameObject.SetActive(false);
     }
 
 }
