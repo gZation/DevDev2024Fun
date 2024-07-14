@@ -128,4 +128,31 @@ public class Player : MonoBehaviour, IDamagable
         go.AddComponent<M>().OnApply(data);
         
     }
+    [SerializeField] private Transform rods;
+    public void UpgradeTrowel()
+    {
+        bool activeNext = false;
+        float dmg = 0;
+        int n = 0;
+        foreach (Transform rod in rods)
+        {
+            if (rod.gameObject.activeSelf)
+            {
+                if (n > 6)
+                {
+                    return;
+                }
+                activeNext = true;
+                dmg = rod.GetComponentInChildren<Damager>().damage;
+                rod.gameObject.SetActive(false);
+            }
+            else if (activeNext)
+            {
+                rod.GetComponentInChildren<Damager>().damage = dmg;
+                rod.gameObject.SetActive(true);
+                return;
+            }
+            n++;
+        }
+    }
 }
