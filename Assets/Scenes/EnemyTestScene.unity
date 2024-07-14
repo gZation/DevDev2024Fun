@@ -2019,21 +2019,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SentientTrowelManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8989583895584128752, guid: 357267f6ca46ae64ca54326156305ef5,
-        type: 3}
-      propertyPath: trowelCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8989583895584128752, guid: 357267f6ca46ae64ca54326156305ef5,
-        type: 3}
-      propertyPath: previousPositionSamplingCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8989583895584128752, guid: 357267f6ca46ae64ca54326156305ef5,
-        type: 3}
-      propertyPath: previousPositionSamplingInterval
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

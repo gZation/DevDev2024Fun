@@ -63,12 +63,6 @@ public class SentientTrowelManager : MonoBehaviour {
                             previousPositions.RemoveAt(0);
                         }
 
-                        string debug = "";
-                        foreach (Vector3 previousPos in previousPositions) {
-                            debug += previousPos.ToString() + " ";
-                        }
-                        Debug.Log(debug);
-
                         previousPositionSamplingTimer = previousPositionSamplingInterval;
                     }
                 }
