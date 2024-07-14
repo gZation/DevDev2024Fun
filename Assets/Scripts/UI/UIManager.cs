@@ -31,14 +31,17 @@ public class UIManager : MonoBehaviour
     #region UI Method Update Calls
     public void UpdatePlayerHealth(float currHealth, float maxHealth)
     {
+        if (healthfill == null) return;
         healthfill.fillAmount = currHealth / maxHealth;
     }
     public void UpdatePlayerMaxHealth(float maxHealth)
     {
+        if (healthbar == null) return;
         healthbar.offsetMax = new Vector2(maxHealth * 2 - 1900, healthbar.offsetMax.y);
     }
     public void AddNewCard(Item item)
     {
+        if (itemCardFab == null || cardInventory == null) return;
         GameObject go = Instantiate(itemCardFab);
         if (go == null) return;
         go.transform.SetParent(cardInventory, false);

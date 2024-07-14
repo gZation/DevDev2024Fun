@@ -74,6 +74,7 @@ public class Player : MonoBehaviour, IDamagable
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
