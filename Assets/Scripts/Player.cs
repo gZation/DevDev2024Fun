@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +9,10 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Player : MonoBehaviour, IDamagable
 {
+
+    public static event EventHandler<EventArgs> OnPlayerSlash;
+
+
     [Header("Player Stats")]
     public float speed;
     [SerializeField] private float currHealth;
@@ -98,6 +103,7 @@ public class Player : MonoBehaviour, IDamagable
     {
         // TODO: VFX Slash
         animator.Play("slash");
+        OnPlayerSlash?.Invoke(this, EventArgs.Empty);
     }
     #endregion
     public void Damage(float amount)
