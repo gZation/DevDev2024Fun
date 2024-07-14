@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - room
   - treasure
   CreatesTags: []
   Exits: {fileID: 0}
