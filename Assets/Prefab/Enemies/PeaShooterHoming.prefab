@@ -139,13 +139,17 @@ MonoBehaviour:
   attackDelay: 3
   health: 50
   healthFill: {fileID: 7788146239679136826}
+  itemDrops:
+  - {fileID: 4353664786704108717, guid: 42deae169a76d1642a556f35266cca2b, type: 3}
+  - {fileID: 3973032964372029129, guid: 58d2b2f952a57de448666e2a7b9877e4, type: 3}
+  - {fileID: 3498620723032469583, guid: 126a2c51b986a2348ba10b55feb6a73e, type: 3}
   peaShooterRotateTransform: {fileID: 8799746810376429902}
   projectileSpawnPosition: {fileID: 1619112260564946127}
   peaProjectilePrefab: {fileID: 1284824311933956366, guid: 38b3715b68fdc33419f8d831d3cbef4a,
     type: 3}
   projectileSpeed: 5
-  useHoming: 0
-  projectileHomingSpeed: 0
+  useHoming: 1
+  projectileHomingSpeed: 2
   projectileHomingAcceleration: 0
   turnSpeed: 20
 --- !u!136 &5403482374314520878

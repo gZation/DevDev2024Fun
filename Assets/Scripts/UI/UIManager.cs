@@ -25,9 +25,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private RectTransform healthbar;
     [SerializeField] private Transform cardInventory;
+    [SerializeField] private Transform suitUpgrades;
 
-    [Header("Prefab Refs")]
+    [Header("UI Fabs")]
     [SerializeField] private GameObject itemCardFab;
+    [SerializeField] private GameObject iconFab;
     
 
     #region UI Method Update Calls
@@ -50,6 +52,14 @@ public class UIManager : MonoBehaviour
         if (go == null) return;
         go.transform.SetParent(cardInventory, false);
         go.GetComponent<ItemCard>().UpdateCardDetails(item);
+    }
+    public void AddUpgrade(Sprite sprite)
+    {
+        if (iconFab == null || suitUpgrades == null) return;
+        GameObject go = Instantiate(iconFab);
+        if (go == null) return;
+        go.transform.SetParent(suitUpgrades, false);
+        go.GetComponent<Image>().sprite = sprite;
     }
     #endregion
 }

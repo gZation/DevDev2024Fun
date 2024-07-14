@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,9 @@ public class SentientTrowelManager : MonoBehaviour {
     }
 
     private State state = State.Idle;
-
+    public State CurrState => state;
+    public event Action OnSelfAttackState;
+    public event Action OnIdleState;
 
     private List<Transform> trowelParents;
     private List<Vector3> previousPositions;
@@ -51,6 +54,7 @@ public class SentientTrowelManager : MonoBehaviour {
             case State.Idle:
                 if (IsStationary()) {
                     state = State.SelfAttack;
+                    OnSelfAttackState?.Invoke();
                     SetSelfAttack(true);
                 } else {
                     transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
@@ -70,6 +74,7 @@ public class SentientTrowelManager : MonoBehaviour {
             case State.SelfAttack:
                 if (!IsStationary()) {
                     state = State.Idle;
+                    OnIdleState?.Invoke();
                     SetSelfAttack(false);
                 }
                 break;

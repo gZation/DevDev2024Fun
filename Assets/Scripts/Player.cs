@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using static UnityEngine.Rendering.DebugUI;
 
 public class Player : MonoBehaviour, IDamagable
@@ -137,12 +138,12 @@ public class Player : MonoBehaviour, IDamagable
         if (CurrHealth <= 0)
         {
             OnPlayerDeath();
-            Debug.Log("Player Is Dead");
         }
     }
     public void OnPlayerDeath()
     {
-
+        SceneManager.LoadSceneAsync("death");
+        Destroy(gameObject);
     }
     public void ApplyModifier<M, D>(D data) 
         where M : PlayerModifier<D> 

@@ -19,27 +19,28 @@ public abstract class Item : MonoBehaviour
     public string Debuff => debuff;
     public string Buff => buff;
     protected bool isCollectible = true;
+    private AudioSource audioSource;
+    private bool pickedUp = false;
 
     //private SpriteRenderer spriteRenderer;
-    //private void Awake()
-    //{
-    //    spriteRenderer = GetComponent<SpriteRenderer>();    
-    //}
-    //private void Start()
-    //{
-    //   spriteRenderer.sprite = itemSprite;
-    //}
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
+        if (pickedUp) return;
         if (other.TryGetComponent(out Player player))
         {
             OnPickUp(player);
+            audioSource.Play();
             if (isCollectible)
             {
                 player.collectedItems.Add(this);
                 UIManager.Instance.AddNewCard(this);
             }
-            Destroy(gameObject);
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            pickedUp = true;
         }
     }
 

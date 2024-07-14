@@ -306,6 +306,10 @@ MonoBehaviour:
   attackDelay: 5
   health: 50
   healthFill: {fileID: 6902716269851110115}
+  itemDrops:
+  - {fileID: 4353664786704108717, guid: 42deae169a76d1642a556f35266cca2b, type: 3}
+  - {fileID: 3973032964372029129, guid: 58d2b2f952a57de448666e2a7b9877e4, type: 3}
+  - {fileID: 3498620723032469583, guid: 126a2c51b986a2348ba10b55feb6a73e, type: 3}
   animator: {fileID: 7739794092070220279}
   singleHit: 1
 --- !u!95 &7739794092070220279

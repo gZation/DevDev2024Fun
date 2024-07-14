@@ -10,17 +10,21 @@ public class Teleporter : MonoBehaviour
     [SerializeField] private float stayTime;
     private float cooldown;
     private bool teleporting;
-    //private new ParticleSystem particleSystem;
+    private AudioSource audioSource;
+    private new ParticleSystem particleSystem;
     private void Awake()
     {
-        //particleSystem = GetComponentInChildren<ParticleSystem>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Player player))
         {
             cooldown = Time.time + stayTime;
+            particleSystem.Play();
             player.particleSystem.Play();
+            audioSource.Play();
         }
             
     }
@@ -39,6 +43,8 @@ public class Teleporter : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
+            audioSource.Stop();
+            particleSystem.Stop();
             player.particleSystem.Stop();
         }
 
