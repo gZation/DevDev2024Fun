@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SporeBush : Enemy {
 
-
+    [Header("SporeBush")]
     [SerializeField] Transform sporeProjectilePrefab;
     [SerializeField] Transform projectileSpawnPosition;
 

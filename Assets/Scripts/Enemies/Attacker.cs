@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Attacker : MonoBehaviour {
 
-
+    [Header("Attacker")]
     [SerializeField] protected float damage = 30;
     [SerializeField] private float attackDelay = 3;
 

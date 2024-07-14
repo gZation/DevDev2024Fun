@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chomper : Enemy {
 
-
+    [Header("Chomper")]
     [SerializeField] private Animator animator;
     [SerializeField] private bool singleHit = true;
 

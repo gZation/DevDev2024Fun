@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PeaShooter : Enemy {
 
-
+    [Header("PeaShooter")]
     [SerializeField] Transform peaShooterRotateTransform;
     [SerializeField] Transform projectileSpawnPosition;
     [SerializeField] Transform peaProjectilePrefab;
