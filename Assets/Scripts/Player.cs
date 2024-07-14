@@ -36,6 +36,10 @@ public class Player : MonoBehaviour, IDamagable
         set
         {
             currHealth = value;
+            if (currHealth > maxHealth)
+            {
+                currHealth = maxHealth; 
+            }
             UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);   
         }
     }
