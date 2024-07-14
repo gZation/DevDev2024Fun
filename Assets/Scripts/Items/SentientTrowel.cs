@@ -9,6 +9,6 @@ public class SentientTrowel : Item
     public Sprite AngrySprite => angrySprite;
     protected override void OnPickUp(Player player)
     {
-        
+        SentientTrowelManager.Instance.AddTrowel();
     }
 }
