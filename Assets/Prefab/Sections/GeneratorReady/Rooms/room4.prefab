@@ -1793,8 +1793,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - room
-  CreatesTags: []
-  Exits: {fileID: 0}
+  CreatesTags:
+  - corridor
+  - treasure
+  Exits: {fileID: 7392984890783171594}
   Bounds: {fileID: 3553534263129836000}
   DeadEndChance: 0
 --- !u!1 &5757742870181857724
