@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigTrowel : Item
+public class ApolloInjection : Item
 {
     protected override void OnPickUp(Player player)
     {
-        player.UpgradeTrowel();
+        player.speed *= 3;
     }
 }
