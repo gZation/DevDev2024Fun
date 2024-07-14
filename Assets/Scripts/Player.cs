@@ -27,6 +27,14 @@ public class Player : MonoBehaviour, IDamagable
         set
         {
             maxHealth = value;
+            if (maxHealth < currHealth)
+            {
+                CurrHealth = value;
+            }
+            if (maxHealth <= 0)
+            {
+                maxHealth = 1;
+            }
             UIManager.Instance.UpdatePlayerMaxHealth(maxHealth);
         }
     }
@@ -80,7 +88,7 @@ public class Player : MonoBehaviour, IDamagable
     #region Actions
     public void OnMove(InputValue value)
     {
-        if (infiMove && value.Get<Vector2>() == Vector2.zero && value.Get<Vector2>().magnitude < 1) 
+        if (infiMove && (value.Get<Vector2>() == Vector2.zero || value.Get<Vector2>().magnitude < 1f)) 
         {
             return;
         }
