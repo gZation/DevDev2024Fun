@@ -7,5 +7,6 @@ public class ApolloInjection : Item
     protected override void OnPickUp(Player player)
     {
         player.speed *= 3;
+
     }
 }
