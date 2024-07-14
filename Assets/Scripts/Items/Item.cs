@@ -9,7 +9,15 @@ public abstract class Item : MonoBehaviour
     [SerializeField] private Sprite itemSprite;
     [SerializeField] private string itemName;
     [SerializeField] private float weight;
-    [SerializeField, TextArea] private string description;
+    [SerializeField, TextArea] private string lore;
+    [SerializeField, TextArea] private string buff;
+    [SerializeField, TextArea] private string debuff;
+    public Sprite ItemSprite => itemSprite;
+    public string ItemName => itemName;
+    public float Weight => weight;
+    public string Lore => lore;
+    public string Debuff => debuff;
+    public string Buff => buff;
 
     //private SpriteRenderer spriteRenderer;
     //private void Awake()
@@ -26,7 +34,7 @@ public abstract class Item : MonoBehaviour
         {
             OnPickUp(player);
             player.collectedItems.Add(this);
-            // TODO: UPDATE UI HERE
+            UIManager.Instance.AddNewCard(this);
             Destroy(gameObject);
         }
     }

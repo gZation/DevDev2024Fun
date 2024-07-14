@@ -6,7 +6,7 @@ public class ApolloInjection : Item
 {
     protected override void OnPickUp(Player player)
     {
-        player.speed *= 3;
-
+        player.AttackCooldown /= 1.5f;
+        player.wrench.damage /= 1.25f;
     }
 }

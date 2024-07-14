@@ -2237,9 +2237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2812c7e352f4d4540a59497ab7ad02cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
   currHealth: 200
   maxHealth: 200
+  speed: 4
+  attackCooldown: 0.33333334
   wrench: {fileID: 5059738674335147088}
   collectedItems: []
   infiMove: 0

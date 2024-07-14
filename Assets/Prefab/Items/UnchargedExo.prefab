@@ -189,4 +189,7 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: e28c022ec6549284cbb89d1124241629, type: 3}
   itemName: Uncharged ExoSkeleton
   weight: 8
-  description: 
+  lore: Strength. Speed. Durability. This suit offers it all for the small price
+    of 48 double-A's per minute. Maybe you'll find a pack along the way?
+  buff: Increases Health
+  debuff: Reduces movement speed

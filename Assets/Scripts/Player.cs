@@ -12,11 +12,23 @@ public class Player : MonoBehaviour, IDamagable
 
     public static event EventHandler<EventArgs> OnPlayerSlash;
 
-
     [Header("Player Stats")]
-    public float speed;
     [SerializeField] private float currHealth;
     [SerializeField] private float maxHealth;
+    public float speed;
+    [SerializeField] private float attackCooldown = 0.3333333f;
+    public float AttackCooldown 
+    {
+        get => attackCooldown;
+        set
+        {
+            attackCooldown = value;
+            animator.SetFloat("speed", (1f / 3f) / attackCooldown);
+        }
+    }
+    
+    private float currCooldown;
+    
     public float CurrHealth
     {
         get => currHealth;
@@ -67,6 +79,7 @@ public class Player : MonoBehaviour, IDamagable
     {
         UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);
         UIManager.Instance.UpdatePlayerMaxHealth(maxHealth);
+        animator.SetFloat("speed", (1f / 3f) / attackCooldown);
     }
     private void FixedUpdate()
     {
@@ -101,6 +114,8 @@ public class Player : MonoBehaviour, IDamagable
     }
     public void OnSlash(InputValue value)
     {
+        if (Time.time < currCooldown) return;
+        currCooldown = attackCooldown + Time.time;
         // TODO: VFX Slash
         animator.Play("slash");
         OnPlayerSlash?.Invoke(this, EventArgs.Empty);

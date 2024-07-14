@@ -70,7 +70,10 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: dd12653c9a941c84dbf62c281ba454dd, type: 3}
   itemName: BigTrowel
   weight: 10
-  description: 
+  lore: You may ask why anyone would need such a long tool, but the 5-foot trowel
+    will stare back silently all the same.
+  buff: Increases Trowel Length
+  debuff: Decreases Damage
 --- !u!1 &5012222837579406429
 GameObject:
   m_ObjectHideFlags: 0
