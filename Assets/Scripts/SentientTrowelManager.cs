@@ -11,7 +11,12 @@ public class SentientTrowelManager : MonoBehaviour {
 
     [SerializeField] private Transform sentientTrowelParentPrefab;
     [SerializeField] private float rotateSpeed = 150;
+    [SerializeField] private int previousPositionSamplingCount = 2;
+    [SerializeField] private float previousPositionSamplingInterval = .1f;
     [SerializeField] private int initialTrowelCount = 0;
+
+
+    private float previousPositionSamplingTimer;
 
 
     public enum State {
@@ -19,7 +24,7 @@ public class SentientTrowelManager : MonoBehaviour {
         SelfAttack
     }
 
-    public State state = State.Idle;
+    private State state = State.Idle;
 
 
     private List<Transform> trowelParents;
@@ -49,9 +54,22 @@ public class SentientTrowelManager : MonoBehaviour {
                     SetSelfAttack(true);
                 } else {
                     transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
-                    previousPositions.Add(transform.position);
-                    if (previousPositions.Count >= 5) {
-                        previousPositions.RemoveAt(0);
+
+                    if (previousPositionSamplingTimer > 0) {
+                        previousPositionSamplingTimer -= Time.deltaTime;
+                    } else {
+                        previousPositions.Add(transform.position);
+                        if (previousPositions.Count > previousPositionSamplingCount) {
+                            previousPositions.RemoveAt(0);
+                        }
+
+                        string debug = "";
+                        foreach (Vector3 previousPos in previousPositions) {
+                            debug += previousPos.ToString() + " ";
+                        }
+                        Debug.Log(debug);
+
+                        previousPositionSamplingTimer = previousPositionSamplingInterval;
                     }
                 }
                 break;
@@ -84,7 +102,7 @@ public class SentientTrowelManager : MonoBehaviour {
     }
 
     private bool IsStationary() {
-        if (previousPositions == null || previousPositions.Count == 0) {
+        if (previousPositions == null || previousPositions.Count < previousPositionSamplingCount) {
             return false;
         }
 
