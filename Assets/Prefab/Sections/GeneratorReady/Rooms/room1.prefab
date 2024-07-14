@@ -3578,9 +3578,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - room
+  - room1
   CreatesTags:
   - corridor
   - treasure
+  - room2
+  - room3
+  - room4
+  - branchingCorridor
   Exits: {fileID: 156095307895878237}
   Bounds: {fileID: 1906439052999393246}
   DeadEndChance: 0

@@ -2806,11 +2806,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - corridor
+  - branchingCorridor
   CreatesTags:
   - room
   - corner
-  - treasure
   - final
   Exits: {fileID: 3362565390827883932}
   Bounds: {fileID: 487463006427549638}

@@ -161,7 +161,7 @@ MonoBehaviour:
   Tags:
   - start
   CreatesTags:
-  - corridor
+  - branchingCorridor
   Exits: {fileID: 8772988707081142473}
   Bounds: {fileID: 5047584987727223906}
   DeadEndChance: 0

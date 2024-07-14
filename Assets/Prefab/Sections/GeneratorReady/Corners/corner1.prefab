@@ -56,7 +56,7 @@ MonoBehaviour:
   CreatesTags:
   - room
   - corridor
-  - final
+  - branchingCorridor
   Exits: {fileID: 6642205091493777972}
   Bounds: {fileID: 3452607808106994507}
   DeadEndChance: 0

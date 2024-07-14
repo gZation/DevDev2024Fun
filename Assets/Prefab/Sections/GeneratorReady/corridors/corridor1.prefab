@@ -730,7 +730,6 @@ MonoBehaviour:
   CreatesTags:
   - room
   - corner
-  - final
   Exits: {fileID: 3362565390827883932}
   Bounds: {fileID: 487463006427549638}
   DeadEndChance: 0
