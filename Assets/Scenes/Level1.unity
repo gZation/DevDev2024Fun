@@ -516,19 +516,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
         type: 3}
+      propertyPath: MaxLevelSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: MaxAllowedOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
       propertyPath: DeadEnds.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
         type: 3}
       propertyPath: Sections.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
         type: 3}
       propertyPath: DeadEnds.Array.data[1]
       value: 
-      objectReference: {fileID: 2908191066409621088, guid: 74eb82ed67acc0948bd4eedbbef03ee4,
+      objectReference: {fileID: -8942909110158795185, guid: 63faa8aec947e8940a2fdf0424d25126,
         type: 3}
     - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
         type: 3}
@@ -600,8 +610,43 @@ PrefabInstance:
         type: 3}
       propertyPath: Sections.Array.data[10]
       value: 
-      objectReference: {fileID: 5374202910396662766, guid: 3009d4a9548ce8745a5f49ee8b4356e1,
+      objectReference: {fileID: 759548184362970571, guid: e5025179b726c8b408bb6bb0947a017c,
         type: 3}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[1].Tag
+      value: room
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[2].Tag
+      value: treasure
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[1].MaxAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[1].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[2].MaxAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848047839535035207, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
+        type: 3}
+      propertyPath: SpecialRules.Array.data[2].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2837467556178178959, guid: 7f8ce134fca1e1b4ba72d55c5a8afa9a,
         type: 3}
       propertyPath: m_Name

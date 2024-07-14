@@ -348,6 +348,7 @@ MonoBehaviour:
   - room
   CreatesTags:
   - corridor
+  - treasure
   Exits: {fileID: 1128796229761860757}
   Bounds: {fileID: 2043883838877858966}
   DeadEndChance: 0
