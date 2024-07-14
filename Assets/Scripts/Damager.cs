@@ -15,6 +15,13 @@ public class Damager : MonoBehaviour
             damagable.Damage(damage);
         }
     }
+    protected virtual void OnColliderEnter(Collision other)
+    {
+        if (other.gameObject.TryGetComponent(out IDamagable damagable) && !ignoreList.Contains(other.gameObject))
+        {
+            damagable.Damage(damage);
+        }
+    }
 }
 
 public interface IDamagable
