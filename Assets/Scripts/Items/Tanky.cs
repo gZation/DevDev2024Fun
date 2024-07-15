@@ -6,7 +6,7 @@ public class Tanky : Item
 {
     protected override void OnPickUp(Player player)
     {
-        player.speed /= 2f;
+        player.speed -= 1;
         player.MaxHealth += 200f;
     } 
 }

@@ -72,11 +72,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
   itemName: Health
-  weight: 10
+  weight: 2
   lore: 
   buff: 
   debuff: 
-  amount: 100
+  amount: 30
 --- !u!135 &3268552539635650118
 SphereCollider:
   m_ObjectHideFlags: 0

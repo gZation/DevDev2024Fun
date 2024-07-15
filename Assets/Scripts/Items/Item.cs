@@ -44,5 +44,22 @@ public abstract class Item : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (pickedUp) return;
+        if (other.gameObject.TryGetComponent(out Player player))
+        {
+            OnPickUp(player);
+            audioSource.Play();
+            if (isCollectible)
+            {
+                player.collectedItems.Add(this);
+                UIManager.Instance.AddNewCard(this);
+            }
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            pickedUp = true;
+        }
+    }
+
     protected abstract void OnPickUp(Player player);
 }

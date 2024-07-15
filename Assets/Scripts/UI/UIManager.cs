@@ -37,13 +37,13 @@ public class UIManager : MonoBehaviour
     {
         if (healthfill == null) return;
         healthfill.fillAmount = currHealth / maxHealth;
-        healthText.text = $"{currHealth}/{maxHealth}";
+        healthText.text = $"{(int)currHealth}/{maxHealth}";
     }
     public void UpdatePlayerMaxHealth(float maxHealth)
     {
         if (healthbar == null) return;
         healthbar.offsetMax = new Vector2(maxHealth * 2 - 1900, healthbar.offsetMax.y);
-        healthText.text = $"{healthfill.fillAmount * maxHealth}/{maxHealth}";
+        healthText.text = $"{healthfill.fillAmount * (int)maxHealth}/{maxHealth}";
     }
     public void AddNewCard(Item item)
     {

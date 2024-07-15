@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 33b6e0d15fb3e6042b39a85625c11961, type: 3}
   itemName: Sentient Trowel
-  weight: 10
+  weight: 2
   lore: 'Some sort of scrapped project from the mech department. Its note reads:
     ''Has a temper. Must be walked regularly.'
   buff: Spinning trowel that attacks

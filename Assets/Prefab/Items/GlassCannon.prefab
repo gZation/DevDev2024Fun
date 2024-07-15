@@ -192,13 +192,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: ddc9ed73fc0c6434999507e3a90d5533, type: 3}
   itemName: Shattered Glass Cannon
-  weight: 10
+  weight: 2
   lore: Fan-favorite entry to the crew's annual Least-Likely-To-Be-OSHA-Approved
     Invention contest. Clearly a melee weapon.
   buff: Increases attack damage
   debuff: Reduces health
   healthDecrease: 100
-  damageIncrease: 10
+  damageIncrease: 15
 --- !u!135 &8240357472027333698
 SphereCollider:
   m_ObjectHideFlags: 0

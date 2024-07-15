@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 87c0c95b7b1f1864f8219bed2b6fd771, type: 3}
   itemName: SpeedBoots
-  weight: 10
+  weight: 2
   lore: Looks like someone forgot to close the wiring. They were probably done repairing
     them... right?
   buff: Increases movement speed

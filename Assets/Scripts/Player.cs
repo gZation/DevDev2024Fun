@@ -61,6 +61,7 @@ public class Player : MonoBehaviour, IDamagable
             {
                 maxHealth = 1;
             }
+            UIManager.Instance.UpdatePlayerHealth(currHealth, maxHealth);
             UIManager.Instance.UpdatePlayerMaxHealth(maxHealth);
         }
     }
@@ -104,10 +105,12 @@ public class Player : MonoBehaviour, IDamagable
         if (movement == Vector3.zero)
         {
             animator.SetBool("moving", false);
+            rb.velocity = movement;
             return;
         }
         animator.SetBool("moving", true);
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        rb.velocity = movement;
         Quaternion targetRotation = Quaternion.LookRotation(movement.normalized);
         targetRotation = Quaternion.RotateTowards(
             transform.rotation,
@@ -120,18 +123,24 @@ public class Player : MonoBehaviour, IDamagable
     #region Actions
     public void OnMove(InputValue value)
     {
+        if (value == null)
+        {
+            movement = Vector3.zero;
+            return;
+        }
         if (infiMove && (value.Get<Vector2>() == Vector2.zero || value.Get<Vector2>().magnitude < 1f)) 
         {
             return;
         }
-        movement = new Vector3(value.Get<Vector2>().x, 0, value.Get<Vector2>().y);
+        movement = new Vector3(value.Get<Vector2>().x, 0, value.Get<Vector2>().y) * speed;
     }
     public void OnSlash(InputValue value)
     {
         if (Time.time < currCooldown) return;
+        
         currCooldown = attackCooldown + Time.time;
-        // TODO: VFX Slash
-        animator.Play("slash");
+        animator.Play(animator.GetCurrentAnimatorStateInfo(1).IsName("frontslash") 
+            ? "backslash": "frontslash");
         OnPlayerSlash?.Invoke(this, EventArgs.Empty);
     }
     #endregion

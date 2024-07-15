@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
@@ -16,13 +17,19 @@ public class Teleporter : MonoBehaviour
         particleSystem = GetComponentInChildren<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
     }
+    private bool preState;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Player player))
         {
+
+            preState = player.infiMove;
+            player.infiMove = false;
+            player.OnMove(null);
             cooldown = Time.time + stayTime;
             particleSystem.Play();
             player.particleSystem.Play();
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             audioSource.Play();
         }
             
@@ -31,6 +38,7 @@ public class Teleporter : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             if (cooldown > Time.time) return;
             if (nextScene.Contains("level"))
             {
@@ -52,6 +60,7 @@ public class Teleporter : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
+            player.infiMove = preState;
             audioSource.Stop();
             particleSystem.Stop();
             player.particleSystem.Stop();

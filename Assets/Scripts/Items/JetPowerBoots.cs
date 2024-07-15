@@ -10,7 +10,7 @@ public class JetPowerBoots : Item
 {
     protected override void OnPickUp(Player player)
     {
-        player.speed += 4;
+        player.speed += 2;
         player.infiMove = true;
     }
 }

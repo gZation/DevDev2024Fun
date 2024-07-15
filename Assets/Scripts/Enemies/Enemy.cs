@@ -34,7 +34,7 @@ public abstract class Enemy : ProximityAttacker, IDamagable {
         {
             total += item.Weight;
         }
-        total *= 2f;
+        total *= 1.2f;
         float rand = Random.Range(0, total);
         foreach (Item item in itemDrops)
         {
