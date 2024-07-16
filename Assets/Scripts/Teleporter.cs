@@ -42,7 +42,7 @@ public class Teleporter : MonoBehaviour
             if (cooldown > Time.time) return;
             if (nextScene.Contains("level"))
             {
-                
+                player.infiMove = preState;
                 player.particleSystem.Stop();
                 player.transform.position = Vector3.forward * 5f;
                 Camera.main.transform.position = Vector3.up * 8 + Vector3.forward * 1.5f;
