@@ -10,7 +10,7 @@ public class PeaProjectile : Damager {
     private bool useHoming;
     private float homingSpeed;
     private float homingAcceleration;
-    private Vector3 direction;
+    [SerializeField] private Vector3 direction;
 
 
     public void Setup(Player player, float damage, float projectileSpeed) {
@@ -33,7 +33,7 @@ public class PeaProjectile : Damager {
     private void Update() {
         if (useHoming) {
             if (player == null) Destroy(gameObject);
-            direction = Vector3.Slerp(direction, (player.transform.position - new Vector3(transform.position.x, 0, transform.position.z)).normalized, Time.deltaTime * homingSpeed);
+            direction = Vector3.Slerp(direction, (new Vector3(player.transform.position.x, 0, player.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized, Time.deltaTime * homingSpeed);
             homingSpeed += homingAcceleration * Time.deltaTime;
         }
 
@@ -41,7 +41,9 @@ public class PeaProjectile : Damager {
     }
 
     protected override void OnTriggerEnter(Collider other) {
+        Debug.Log(other);
         base.OnTriggerEnter(other);
+        Debug.Log("Destroying");
         Destroy(gameObject);
     }
 
