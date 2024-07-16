@@ -33,7 +33,18 @@ public class PeaProjectile : Damager {
     private void Update() {
         if (useHoming) {
             if (player == null) Destroy(gameObject);
-            direction = Vector3.Slerp(direction, (new Vector3(player.transform.position.x, 0, player.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized, Time.deltaTime * homingSpeed);
+
+            // Old - ignore y-level
+            //direction = Vector3.Slerp(direction, (new Vector3(player.transform.position.x, 0, player.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized, Time.deltaTime * homingSpeed);
+            
+            // New - include y-level (zero out dy if y positions are within margin)
+            direction = Vector3.Slerp(direction, (player.transform.position - transform.position).normalized, Time.deltaTime * homingSpeed);
+            float yMargin = 0.1f;
+            float playerTargetingHeight = 1.3f;
+            if (Mathf.Abs(player.transform.position.y + playerTargetingHeight - transform.position.y) < yMargin) {
+                direction.y = 0;
+            }
+            
             homingSpeed += homingAcceleration * Time.deltaTime;
         }
 
@@ -41,9 +52,8 @@ public class PeaProjectile : Damager {
     }
 
     protected override void OnTriggerEnter(Collider other) {
-        Debug.Log(other);
         base.OnTriggerEnter(other);
-        Debug.Log("Destroying");
+        Debug.Log(other.gameObject);
         Destroy(gameObject);
     }
 
