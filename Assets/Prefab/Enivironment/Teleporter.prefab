@@ -5203,7 +5203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: 
-  stayTime: 1
+  stayTime: 0.01
 --- !u!136 &2577197342662633224
 CapsuleCollider:
   m_ObjectHideFlags: 0

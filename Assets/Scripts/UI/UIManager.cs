@@ -26,12 +26,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private RectTransform healthbar;
     [SerializeField] private Transform cardInventory;
     [SerializeField] private Transform suitUpgrades;
+    [SerializeField] private GameObject bossHealth;
+    [SerializeField] private Image bossHealthFill;
+    [SerializeField] private TextMeshProUGUI bossHealthText;
 
     [Header("UI Fabs")]
     [SerializeField] private GameObject itemCardFab;
     [SerializeField] private GameObject iconFab;
     
-
     #region UI Method Update Calls
     public void UpdatePlayerHealth(float currHealth, float maxHealth)
     {
@@ -42,7 +44,7 @@ public class UIManager : MonoBehaviour
     public void UpdatePlayerMaxHealth(float maxHealth)
     {
         if (healthbar == null) return;
-        healthbar.offsetMax = new Vector2(maxHealth * 2 - 1900, healthbar.offsetMax.y);
+        healthbar.offsetMax = new Vector2(maxHealth - 1820, healthbar.offsetMax.y);
         healthText.text = $"{healthfill.fillAmount * (int)maxHealth}/{maxHealth}";
     }
     public void AddNewCard(Item item)
@@ -60,6 +62,18 @@ public class UIManager : MonoBehaviour
         if (go == null) return;
         go.transform.SetParent(suitUpgrades, false);
         go.GetComponent<Image>().sprite = sprite;
+    }
+    public void UpdateBossHealth(float currHealth, float maxHealth)
+    {
+        bossHealthFill.fillAmount = currHealth / maxHealth;
+    }
+    public void ShowBossHealth()
+    {
+        bossHealth.SetActive(true);
+    }
+    public void HideBossHealth()
+    {
+        bossHealth.SetActive(false);
     }
     #endregion
 }

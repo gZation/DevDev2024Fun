@@ -76,7 +76,7 @@ MonoBehaviour:
   lore: You may ask why anyone would need such a long tool, but the 5-foot trowel
     will stare back silently all the same.
   buff: Increases Trowel Length
-  debuff: Decreases Damage
+  debuff: Decreases Attack Speed
 --- !u!135 &3048748719754833239
 SphereCollider:
   m_ObjectHideFlags: 0
